@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Click to Chat</title>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clicktochat.css" rel="stylesheet">
+
+    <script type="text/javascript">
+      function validateForm(theform) {
+       for (var i=0; i<theform.elements.length; i++) {
+        var element = theform.elements[i];
+        if (element.className.indexOf("required") !=-1) {
+         element.className = "required";
+         if (!isFilled(element)) {
+          alert("Please enter your " +element.id);
+          element.className += " error";
+          element.focus();
+          return false;
+         } 
+        }
+        if (element.className.indexOf("email") !=-1) {
+         element.className = "required";
+         if (!isEmail(element)) {
+          alert("Please check you have entered a valid email address");
+          element.className += " error";
+          element.focus();
+          return false;
+         }
+        }
+       }
+       return true;
+      }
+
+      function isFilled(field) {
+       if (field.value.length < 1) {
+        return false;
+       } else {
+        return true;
+       }
+      }
+      function isEmail(field) {
+       if (field.value.indexOf("@") == -1 || field.value.indexOf(".") == -1) {
+        return false;
+       } else {
+        return true;
+       }
+      } 
+
+    </script>
+
+  </head>
+
+  <body>
+
+    
+    <div class="container">
+
+      <div class="modal">
+        <button type="button" class="close">&nbsp;</button>
+
+        <div class="modal-content">
+          
+          <div class="page-header">
+            <h1>Chat with a Juniper <br>Networks Sales Expert.</h1>
+            <p>Before we begin, please provide the following information so we may serve you better. For customer service-related questions or product support, please visit <a href="#">Customer Support.</a></p>
+          </div>
+
+          <form class="modal-form" action="" method="post" onsubmit="return validateForm(this);">
+            <div class="error">All fields are required.</div>
+            
+            <div class="form-group">
+              <label for="firstname">First Name</label>
+              <input type="text" name="firstname" id="firstname" class="required" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="lastname">Last Name</label>
+              <input type="text" name="lastname" id="lastname" class="required" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" name="email" id="email" class="email required" placeholder="">
+            </div>
+             
+            <div class="checkbox">
+              <label>
+                 Juniper Networks protects your personal data in accordance with our <a href="#">Privacy Policy</a>.
+              </label>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal -->
+
+    </div> <!-- /container -->
+
+
+
+  </body>
+</html>

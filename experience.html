@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Click to Chat</title>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clicktochat.css" rel="stylesheet">
+
+    <!--[if gt IE 7]>
+      <script src="js/placeholders.min.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <!--[if IE 8]> 
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+      <script type="text/javascript" src="js/selectivizr-min.js"></script>
+
+      <script type="text/javascript">   
+        $(function() {    
+          $(".col2 label").click(function() {           
+            $(this).addClass("checked").siblings().removeClass("checked");
+            $("#" + $(this).attr("for")).trigger("click");
+
+          });
+
+          $(".ie8 label").click(function() {     
+            $(this).addClass("checked").siblings().removeClass("checked");
+            $("#" + $(this).attr("for")).trigger("click");  
+          });   
+        });  
+      </script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    
+    <div class="container">
+
+      <div class="modal">
+        <button type="button" class="close">&nbsp;</button>
+
+        <div class="modal-content">
+          
+          <div class="page-header">
+            <h2>Tell us about your experience</h2>
+            <p class="lead">Please tell us about your chat experience so we can better assist you in the future.</p>
+            <hr />
+          </div>
+
+          <form class="modal-form" name="Q413GLBInboundCTCSurvey" id="Q413GLBInboundCTCSurvey" method="post" action="http://s1229.t.eloqua.com/e/f2" target="_top" onsubmit="return eloquaForm_validateForm()">
+            <input type="hidden" name="elqFormName" value="Q413GLBInboundCTCSurvey"/>
+            <input type="hidden" name="elqSiteID" value="1229"/>
+            <input type="hidden" name="srcURL" value="">
+            <input type="hidden" name="C_Return_URL1" value="">
+            <input type="hidden" name="C_Most_Recent_SFDC_Campaign_ID1" value="">
+
+            <div class="error">Error: You need to answer at least one question to submit the survey.</div>
+
+            <div class="form-experience">
+              <div class="col1"><label for="questions">Were your questions answered quickly?</label></div>
+              
+              <div class="col2">
+                <div class="minus">&minus;</div> 
+                <input type="radio" id="question1" name="questions" value="" class="radio_id" checked>
+                   <label for="question1">1</label>
+                <input type="radio" id="question2" name="questions" value="" class="radio_id">
+                   <label for="question2">2</label>
+                <input type="radio" id="question3" name="questions" value="" class="radio_id">
+                   <label for="question3">3</label>
+                <input type="radio" id="question4" name="questions" value="" class="radio_id">
+                   <label for="question4">4</label>
+                <input type="radio" id="question5" name="questions" value="" class="radio_id">
+                   <label for="question5">5</label>
+                <div class="plus">&#43;</div>
+              </div>
+            </div>
+
+            <div class="form-experience">
+              <div class="col1"><label for="satisfied">How satisfied were you with the answers?</label></div>
+
+              <div class="col2">
+                <div class="minus">&minus;</div> 
+                <input type="radio" id="satisfied1" name="satisfied" value="" class="radio_id" checked>
+                   <label for="satisfied1">1</label>
+                <input type="radio" id="satisfied2" name="satisfied" value="" class="radio_id">
+                   <label for="satisfied2">2</label>
+                <input type="radio" id="satisfied3" name="satisfied" value="" class="radio_id">
+                   <label for="satisfied3">3</label>
+                <input type="radio" id="satisfied4" name="satisfied" value="" class="radio_id">
+                   <label for="satisfied4">4</label>
+                <input type="radio" id="satisfied5" name="satisfied" value="" class="radio_id">
+                   <label for="satisfied5">5</label>
+                <div class="plus">&#43;</div>
+              </div>
+            </div>
+
+            <div class="form-experience">
+              <div class="col1"><label for="rate">How would you rate your overall chat experience?</label></div>
+
+              <div class="col2">
+               <div class="minus">&minus;</div> 
+                <input type="radio" id="rate1" name="rate" value="" class="radio_id" checked>
+                   <label for="rate1">1</label>
+                <input type="radio" id="rate2" name="rate" value="" class="radio_id">
+                   <label for="rate2">2</label>
+                <input type="radio" id="rate3" name="rate" value="" class="radio_id">
+                   <label for="rate3">3</label>
+                <input type="radio" id="rate4" name="rate" value="" class="radio_id">
+                   <label for="rate4">4</label>
+                <input type="radio" id="rate5" name="rate" value="" class="radio_id">
+                   <label for="rate5">5</label>
+                <div class="plus">&#43;</div>
+              </div>
+            </div>
+
+
+            <div class="form-experience ie8">
+              <label for="chatonline">Would you use online chat again?</label>
+              <input type="radio" name="useAgain" id="useAgainYes" value="" class="radio_id" checked>
+                <label class="useAgain" for="useAgainYes">Y</label>
+              <input type="radio" name="useAgain" id="useAgainNo" value="" class="radio_id" >
+                <label class="useAgain" for="useAgainNo">N</label>
+            </div>
+            <div class="form-experience">
+              <label for="lastname">How did you find us?</label>
+              <div class="styled-select">
+                <select name="mydropdown" name="">
+                  <option value="bookmarked">Bookmarked Juniper.net</option>
+                  <option value="bnetworks">Business Networks - LinkedIn, Xing, Viadeo</option>
+                  <option value="google">Web Search: Google</option>
+                  <option value="bing">Web Search: Bing</option>
+                  <option value="yahoo">Web Search: Yahoo</option>
+                  <option value="search">Web Search: Other Search Engine</option>
+                  <option value="referred">Referred by a Friend / Colleague</option>
+                  <option value="advertisement">Advertisement</option>
+                  <option value="online">Online Publications</option>
+                  <option value="youtube">YouTube</option>
+                  <option value="socialnet">Social Network</option>
+                  <option value="other">Other</option>
+                </select> 
+              </div>
+            </div>
+            <div class="form-experience">
+              <label for="comment">Please share any additional comments relating to your chat experience. </label>
+              <input type="text" class="addcomment" id="" placeholder="Can JNPR provide an example of an action-oriented question?" name="CTC_Comments">
+            </div>
+             
+            
+            <div class="logout"><a id="exit" href="#">No Thanks</a></div> 
+            <div class="submitExp"><button type="submit" class="btn-submit">Submit</button></div>
+          </form>
+          
+          
+             
+         
+          
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal -->
+
+    </div> <!-- /container -->
+
+
+    
+  </body>
+</html>
